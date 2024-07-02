@@ -1,1 +1,40 @@
-Mein Widget 2
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Beispiel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="kreis"></div>
+</body>
+</html>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.kreis {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: relative;
+    animation: bewegen 2s infinite alternate;
+}
+
+@keyframes bewegen {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(200px);
+    }
+}
+</style>
