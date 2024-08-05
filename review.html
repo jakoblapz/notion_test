@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanzBroker Bewertung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .category {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .category:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .category label {
+            flex: 1;
+            color: #555;
+        }
+        .category .value {
+            width: 60px;
+            padding: 5px;
+            margin-left: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .category .checkbox {
+            margin-left: 10px;
+        }
+        .total {
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>FinanzBroker Bewertung</h1>
+    <div class="category">
+        <label for="kosten">Kosten: Depot, Ausführung, Verkauf</label>
+        <div class="value" id="kosten">8</div>
+    </div>
+    <div class="category">
+        <label for="etf-auswahl">ETF Auswahl</label>
+        <div class="value" id="etf-auswahl">7</div>
+    </div>
+    <div class="category">
+        <label for="einstieg-online">Einstieg online verfügbar?</label>
+        <input type="checkbox" id="einstieg-online" class="checkbox" checked disabled>
+    </div>
+    <div class="category">
+        <label for="einstieg-allgemein">Einstieg allgemein</label>
+        <div class="value" id="einstieg-allgemein">6</div>
+    </div>
+    <div class="category">
+        <label for="zahlungsmethoden">Zahlungsmöglichkeiten</label>
+        <div class="value" id="zahlungsmethoden">9</div>
+    </div>
+    <div class="category">
+        <label for="intervall-ab">Intervall ab</label>
+        <div class="value" id="intervall-ab">5</div>
+    </div>
+    <div class="category">
+        <label for="dynamisierung">Dynamisierung?</label>
+        <input type="checkbox" id="dynamisierung" class="checkbox" disabled>
+    </div>
+    <div class="category">
+        <label for="pausierung">Pausierung?</label>
+        <input type="checkbox" id="pausierung" class="checkbox" checked disabled>
+    </div>
+    <div class="category">
+        <label for="sparplan-optionen">Sparplan Optionen</label>
+        <div class="value" id="sparplan-optionen">8</div>
+    </div>
+    <div class="category">
+        <label for="sparplan-allgemein">Sparplan Allgemein</label>
+        <div class="value" id="sparplan-allgemein">7</div>
+    </div>
+    <div class="category">
+        <label for="app-desktop">App & Desktop?</label>
+        <input type="checkbox" id="app-desktop" class="checkbox" checked disabled>
+    </div>
+    <div class="category">
+        <label for="steuern-de">Steuern DE?</label>
+        <input type="checkbox" id="steuern-de" class="checkbox" checked disabled>
+    </div>
+    <div class="category">
+        <label for="tagesgeld">Tagesgeld?</label>
+        <input type="checkbox" id="tagesgeld" class="checkbox" disabled>
+    </div>
+    <div class="category">
+        <label for="aktien-trading">Aktien Trading</label>
+        <div class="value" id="aktien-trading">7</div>
+    </div>
+    <div class="category">
+        <label for="girokonto">Girokonto?</label>
+        <input type="checkbox" id="girokonto" class="checkbox" checked disabled>
+    </div>
+    <div class="category">
+        <label for="unterkonten">Unterkonten?</label>
+        <input type="checkbox" id="unterkonten" class="checkbox" disabled>
+    </div>
+    <div class="total">
+        Gesamtpunktzahl: <span id="gesamtpunktzahl">57</span>
+    </div>
+</div>
+
+</body>
+</html>
