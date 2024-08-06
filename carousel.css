@@ -1,3 +1,7 @@
+body{
+    background-color: aqua;
+}
+
 .container{
     padding: 2rem;
 }
