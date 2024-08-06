@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilderkarussell</title>
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+    <div class="carousel">
+        <button id="prevButton" class="nav-button">&lt;</button>
+        <div class="carousel-container">
+            <div class="carousel-images">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-picture-of-a-train-traveling-along-tracks-image_2966376.jpg" alt="Bild 1">
+                <img src="https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Bild 2">
+                <img src="https://www.psdstack.com/wp-content/uploads/2019/08/copyright-free-images-750x420.jpg" alt="Bild 3">
+                <img src="https://media.istockphoto.com/id/967945504/de/foto/bewohner-oder-bangka-boote-am-strand-angeschwemmt-punta-ballo-sipalay-philippinen-0486.jpg?s=612x612&w=0&k=20&c=ZNT4n9ajFml2kiCquHPGQ44_kmKy4lH6gZY4C3rAlic=" alt="Bild 4">
+            </div>
+        </div>
+        <button id="nextButton" class="nav-button">&gt;</button>
+    </div>
+
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const images = document.querySelectorAll('.carousel-images img');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        let index = 0;
+
+        function showImage(index) {
+            const offset = -index * 100;
+            carouselImages.style.transform = `translateX(${offset}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            index = (index > 0) ? index - 1 : images.length - 1;
+            showImage(index);
+        });
+
+        nextButton.addEventListener('click', () => {
+            index = (index < images.length - 1) ? index + 1 : 0;
+            showImage(index);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
